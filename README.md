@@ -1,7 +1,4 @@
 # Skip-Connected Reverse Distillation for Robust One-Class Anomaly Detection
-![CVPR 2025 Workshop](https://img.shields.io/badge/CVPR%202025-Workshop-red)
-![License](https://img.shields.io/github/license/pej0918/SK-RD4AD)
-![Python](https://img.shields.io/badge/python-3.9+-blue)
 > 📣 Accepted at **CVPR 2025 Workshop (VAND 3.0)**  
 > 🔧 Official PyTorch implementation of our paper, SK-RD4AD.
 
@@ -101,4 +98,6 @@ Tested across industrial benchmarks, it shows consistent improvements over RD4AD
 ```
 TBD
 ```
+
+
 
