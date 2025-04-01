@@ -15,7 +15,7 @@
 
 SK-RD4AD (Skip-Connected Reverse Distillation for Anomaly Detection) introduces a novel and effective architecture for one-class anomaly detection. By leveraging non-corresponding skip connections within a reverse knowledge distillation framework, SK-RD4AD effectively mitigates deep feature degradation, a common issue in traditional distillation-based methods. This enhancement significantly improves both pixel-level anomaly localization and image-level detection across various industrial domains.
 
-## 🔥 Key Features
+## 🔥 Key Highlights
 - 🔗 **Non-Corresponding Skip Connections**  
   Enhances multi-scale feature propagation between encoder and decoder, allowing both low-level textures and high-level semantics to be preserved.
 
@@ -71,8 +71,7 @@ python main.py \
     --net wide_res50 \
     --L2 0
 ```
-> For **VisA**, use `main_visa.py`.
-> For **VAD**, use `main_vad.py`.
+> For **VisA** or **VAD**, use `main_visa.py` or `main_vad.py`.
 
 ## 📈 Performance Highlights
 The model is evaluated using AUROC and AUPRO metrics at pixel level. SK-RD4AD consistently shows significant improvements over RD4AD across MVTec-AD, Valeo VAD, and VisA datasets, especially in categories requiring fine-grained spatial reasoning. : 
