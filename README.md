@@ -108,6 +108,10 @@ Tested across industrial benchmarks, it shows consistent improvements over RD4AD
 ```
 TBD
 ```
+## 🙏 Acknowledgement
+
+This work builds upon the [RD4AD (Anomaly Detection via Reverse Distillation From One-Class Embedding)](https://github.com/hq-deng/RD4AD) framework.  
+We sincerely thank the original authors for open-sourcing their code and pre-trained models, which made this research possible.
 
 
 
