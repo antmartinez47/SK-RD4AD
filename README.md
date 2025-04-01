@@ -16,9 +16,19 @@
 SK-RD4AD (Skip-Connected Reverse Distillation for Anomaly Detection) introduces a novel and effective architecture for one-class anomaly detection. By leveraging non-corresponding skip connections within a reverse knowledge distillation framework, SK-RD4AD effectively mitigates deep feature degradation, a common issue in traditional distillation-based methods. This enhancement significantly improves both pixel-level anomaly localization and image-level detection across various industrial domains.
 
 ## 🔥 Key Features
-- 🔗 **Non-Corresponding Skip Connections**: Enables rich multi-scale feature propagation from the teacher encoder to the student decoder, preserving both fine textures and high-level semantics.
-- 🚀 **State-of-the-Art Performance**: Outperforms RD4AD by +3.5% AUROC on MVTec-AD, VisA, and VAD.
-- 🌐 **Superior Generalization**: Handles both local texture-level and global structural anomalies, including challenging categories like Transistor.
+- 🔗 **Non-Corresponding Skip Connections**  
+  Enhances multi-scale feature propagation between encoder and decoder, allowing both low-level textures and high-level semantics to be preserved.
+
+- 🚀 **State-of-the-Art Performance**  
+  Surpasses RD4AD on **MVTec-AD**, **VisA**, and **VAD** by up to **+3.5% AUROC**, **+21% AUPRO**, and excels in challenging categories like **Transistor**.
+
+- 🌐 **Generalization Power**  
+  Effectively handles diverse anomaly types and generalizes to **real-world datasets** such as **automotive VAD** and **industrial VisA**.
+
+- ⚙️ **Efficient Architecture**  
+  Lightweight decoder with modest memory (401MB) and inference time (0.37s), making it suitable for **edge and cloud** deployment.
+
+---
 
 
 ## 📂 Model Overview
@@ -61,6 +71,9 @@ python main.py \
     --net wide_res50 \
     --L2 0
 ```
+> For **VisA**, use `main_visa.py`.
+> For **VAD**, use `main_vad.py`.
+
 ## 📈 Performance Highlights
 The model is evaluated using AUROC and AUPRO metrics at pixel level. SK-RD4AD consistently shows significant improvements over RD4AD across MVTec-AD, Valeo VAD, and VisA datasets, especially in categories requiring fine-grained spatial reasoning. : 
 
@@ -88,6 +101,14 @@ The model is evaluated using AUROC and AUPRO metrics at pixel level. SK-RD4AD co
 | Pipe Fryum   | 99.1 / 68.3                 | 99.1 / **94.8**                |
 | **Total Avg** | 97.8 / 70.9                 | **98.5 / 92.1**                |
 
+### Model Complexity
+
+| Model       | Time (s) | Memory (MB) | AUROC |
+|-------------|----------|-------------|--------|
+| RD4AD       | 0.31     | 352         | 97.3   |
+| **SK-RD4AD** | 0.37     | 401         | **98.06** |
+
+> Slight increase in cost yields **substantial performance boost**.
 
 ## 🖼️ Visualization
 <p align="center">
