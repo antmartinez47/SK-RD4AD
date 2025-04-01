@@ -1,22 +1,32 @@
 # Skip-Connected Reverse Distillation for Robust One-Class Anomaly Detection
+
+[![CVPR 2025 Workshop](https://img.shields.io/badge/CVPR%202025-Workshop-orange)](https://cvpr2025.thecvf.com/)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![Python](https://img.shields.io/badge/python-3.8%2B-blue.svg)](https://www.python.org/downloads/release/python-380/)
+[![PyTorch](https://img.shields.io/badge/framework-PyTorch-red)](https://pytorch.org/)
+[![MVTec-AD](https://img.shields.io/badge/dataset-MVTec--AD-green)](https://www.mvtec.com/company/research/datasets/mvtec-ad/)
+[![VAD](https://img.shields.io/badge/dataset-VAD-brightgreen)](https://github.com/valeoai/VAD)
+[![VisA](https://img.shields.io/badge/dataset-VisA-yellow)](https://github.com/amazon-science/spot-diff)
+
 > 📣 Accepted at **CVPR 2025 Workshop (VAND 3.0)**  
 > 🔧 Official PyTorch implementation of our paper, SK-RD4AD.
 
 ## 📖 Introduction
 
-SK-RD4AD (Skip-Connected Reverse Distillation for Anomaly Detection) introduces a novel approach to one-class anomaly detection by leveraging non-corresponding skip connections within a Reverse Knowledge Distillation (KD) framework. This architecture addresses the deep feature loss issue prevalent in traditional models by effectively preserving multi-scale feature information, thereby enhancing anomaly localization and detection performance.
+SK-RD4AD (Skip-Connected Reverse Distillation for Anomaly Detection) introduces a novel and effective architecture for one-class anomaly detection. By leveraging non-corresponding skip connections within a reverse knowledge distillation framework, SK-RD4AD effectively mitigates deep feature degradation, a common issue in traditional distillation-based methods. This enhancement significantly improves both pixel-level anomaly localization and image-level detection across various industrial domains.
 
 ## 🔥 Key Features
-- **🔗 Non-Corresponding Skip Connections**: Ensures both fine-grained and high-level structural information retention.
-- **🚀 State-of-the-Art Performance**: Achieves +3.5% AUROC improvement over RD4AD on MVTec-AD, VisA, and VAD datasets.
-- **🌐 Generalization Capability**: Robust against challenging anomaly types, including the difficult Transistor class in MVTec-AD.
+- 🔗 **Non-Corresponding Skip Connections**: Enables rich multi-scale feature propagation from the teacher encoder to the student decoder, preserving both fine textures and high-level semantics.
+- 🚀 **State-of-the-Art Performance**: Outperforms RD4AD by +3.5% AUROC on MVTec-AD, VisA, and VAD.
+- 🌐 **Superior Generalization**: Handles both local texture-level and global structural anomalies, including challenging categories like Transistor.
 
 
 ## 📂 Model Overview
-**SK-RD4AD** enhances the **RD4AD** framework by tackling **information loss** in deep layers. By introducing **non-corresponding skip connections**, it effectively preserves **multi-scale features**, allowing **fine-grained details** to influence **deeper layers**, significantly boosting **anomaly detection performance**.
+SK-RD4AD enhances the original RD4AD framework by addressing deep-layer information loss. It introduces strategically designed non-corresponding skip connections that allow features from shallower teacher layers to influence deeper student layers. This architecture improves the decoder’s capacity to reconstruct complex features and leads to significantly better anomaly localization performance.
 
 
-![Architecture Diagram](https://github.com/pej0918/pej0918.github.io/blob/main/assets/imgs/image_skrd4ad.png)
+![image](https://github.com/user-attachments/assets/51916259-a0a4-4d39-aaa0-ee170d87cfe6)
+
 
 ## ⚙️ Experiment Settings
 
@@ -52,7 +62,7 @@ python main.py \
     --L2 0
 ```
 ## 📈 Performance Highlights
-SK-RD4AD consistently outperforms the baseline RD4AD model across multiple benchmark datasets, demonstrating its robust anomaly detection capabilities. The integration of **non-corresponding skip connections** not only enhances **multi-scale feature retention** but also significantly boosts **anomaly localization** performance : 
+The model is evaluated using AUROC and AUPRO metrics at pixel level. SK-RD4AD consistently shows significant improvements over RD4AD across MVTec-AD, Valeo VAD, and VisA datasets, especially in categories requiring fine-grained spatial reasoning. : 
 
 ### MVTec-AD Dataset Performance
 | Category     | RD4AD (Pixel AUROC/AUPRO) | SK-RD4AD (Pixel AUROC/AUPRO)   |
