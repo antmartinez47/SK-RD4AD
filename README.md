@@ -35,7 +35,7 @@ SK-RD4AD (Skip-Connected Reverse Distillation for Anomaly Detection) introduces 
 SK-RD4AD enhances the original RD4AD framework by addressing deep-layer information loss. It introduces strategically designed non-corresponding skip connections that allow features from shallower teacher layers to influence deeper student layers. This architecture improves the decoder’s capacity to reconstruct complex features and leads to significantly better anomaly localization performance.
 
 
-![image](https://github.com/user-attachments/assets/51916259-a0a4-4d39-aaa0-ee170d87cfe6)
+![image](https://github.com/user-attachments/assets/052d2923-5fa7-45ed-80e1-00ac0e01efd9)
 
 
 ## ⚙️ Experiment Settings
