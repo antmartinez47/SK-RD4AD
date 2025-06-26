@@ -126,7 +126,14 @@ Tested across industrial benchmarks, it shows consistent improvements over RD4AD
 ## 📚 Citation
 
 ```
-TBD
+@InProceedings{Park_2025_CVPR,
+    author    = {Park, EunJu and Kim, Taekyung and Kim, Minju and Lee, Hojun and Lee, Gil-Jun},
+    title     = {SK-RD4AD : Skip-Connected Reverse Distillation For Robust One-Class Anomaly Detection},
+    booktitle = {Proceedings of the Computer Vision and Pattern Recognition Conference (CVPR) Workshops},
+    month     = {June},
+    year      = {2025},
+    pages     = {3945-3953}
+}
 ```
 ## 🙏 Acknowledgement
 
