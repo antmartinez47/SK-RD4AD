@@ -1,13 +1,7 @@
 # Skip-Connected Reverse Distillation for Robust One-Class Anomaly Detection
 
-[![CVPR 2025 Workshop](https://img.shields.io/badge/CVPR%202025-Workshop-orange)](https://cvpr2025.thecvf.com/)
-[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![Python](https://img.shields.io/badge/python-3.8%2B-blue.svg)](https://www.python.org/downloads/release/python-380/)
-[![PyTorch](https://img.shields.io/badge/framework-PyTorch-red)](https://pytorch.org/)
-[![MVTec-AD](https://img.shields.io/badge/dataset-MVTec--AD-green)](https://www.mvtec.com/company/research/datasets/mvtec-ad/)
-[![VAD](https://img.shields.io/badge/dataset-VAD-brightgreen)](https://github.com/valeoai/VAD)
-[![VisA](https://img.shields.io/badge/dataset-VisA-yellow)](https://github.com/amazon-science/spot-diff)
-
+[![CVPR 2025 Workshop](https://img.shields.io/badge/CVPR%202025-Workshop-orange)](https://sites.google.com/view/vand30cvpr2025)
+[![Paper](https://img.shields.io/badge/framework-Paper-red)](https://openaccess.thecvf.com/content/CVPR2025W/VAND/html/Park_SK-RD4AD__Skip-Connected_Reverse_Distillation_For_Robust_One-Class_Anomaly_Detection_CVPRW_2025_paper.html)
 > 📣 Accepted at **CVPR 2025 Workshop (VAND 3.0)**  
 > 🔧 Official PyTorch implementation of our paper, SK-RD4AD.
 
