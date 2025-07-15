@@ -184,14 +184,14 @@ def train(class_, epochs, learning_rate, res, batch_size, print_epoch, seg, data
                     best_avg_score = current_avg_score
                
                 if vis == 1:  # Visualization output when no mask
-                    evaluation_visualization_no_seg(encoder, decoder, res, test_dataloader, device, print_canshu, score_num, img_path)
+                    evaluation_visualization_no_seg(encoder, bn, decoder, res, test_dataloader, device, print_canshu, score_num, img_path)
 
             # Test set with mask and need localization
             if seg == 1:
                 # Go through normal process
                 # Plot
                 if vis == 1:
-                    evaluation_visualization(encoder, decoder, res, test_dataloader, device, print_canshu, score_num, img_path)
+                    evaluation_visualization(encoder, bn, decoder, res, test_dataloader, device, print_canshu, score_num, img_path)
                 # This part calculates the basic results and saves the results of the current epoch.
                 auroc_px, auroc_sp, aupro_px = evaluation(encoder, bn, decoder, res, test_dataloader, device, img_path)
                 print('Pixel Auroc: {:.3f}, Sample Auroc: {:.3f}, Pixel Aupro: {:.3}'.format(auroc_px, auroc_sp, aupro_px))
